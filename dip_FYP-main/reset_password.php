@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['updateAdmin'])) {
     
     $sql = "UPDATE tbl_users SET username = '$username', email = '$email' WHERE id = $admin_id";
     $db->update($sql);
-    header("Location: dashboard.php"); // Redirect to avoid form resubmission
+    header("Location: login.php"); // Redirect to avoid form resubmission
     exit();
 }
 

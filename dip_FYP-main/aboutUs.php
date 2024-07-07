@@ -45,7 +45,7 @@
 							<p><a href="mailto:yasminquasar@gmail.com">yasminquasar@gmail.com</a></p>
 						</div>
 					</div>
-					<div class="card">
+					<!-- <div class="card">
 						<div class="card-img">
 							<img src="image/afiqah.jpg" alt="Afiqah">
 						</div>
@@ -54,7 +54,7 @@
 							<p class="card-role">Member</p>
 							<p><a href="mailto:aaqiddd8@icloud.com">aaqiddd8@icloud.com</a></p>
 						</div>
-					</div>
+					</div> -->
 				</div>
            	</div>
 		<style>
@@ -108,7 +108,7 @@
 				gap: 15px;
 			}
 			.card {
-				background-color: white;
+				background-color: #649765;
 				border-radius: 6px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 				overflow: hidden;

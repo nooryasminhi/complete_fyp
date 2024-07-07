@@ -21,12 +21,12 @@ $db = new Database();
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['reset'])) {
     $email = $_POST['email'];
     $new_password = $_POST['new_password'];
-
+    $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
     // Hash the new password
     // $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
 
     // Update the password in the database
-    $sql = "UPDATE tbl_users SET password='$new_password' WHERE email='$email'";
+    $sql = "UPDATE tbl_users SET password='$hashed_password' WHERE email='$email'";
     
     if ($db->update($sql)) {
         echo "<script>alert('Password reset successfully!');</script>";

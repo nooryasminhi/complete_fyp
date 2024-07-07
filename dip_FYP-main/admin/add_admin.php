@@ -7,11 +7,33 @@ $db = new Database();
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addAdmin'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = sha1($_POST['password']);
-    $sql = "INSERT INTO tbl_users (username, email, password) VALUES ('$username', '$email', '$password')";
-    $db->insert($sql);
-    header("Location: add_admin.php");
+    $password = ($_POST['password']);
+
+    $checkEmailSql = "SELECT * FROM tbl_users WHERE email = '$email'";
+    $emailResult = $db->select($checkEmailSql);
+
+    if ($emailResult) {
+        echo "<script>
+        alert('Email already exists!');
+        window.location.href = 'add_admin.php';
+        </script>";
+    } else {
+        $sql = "INSERT INTO tbl_users (username, email, password) VALUES ('$username', '$email', '$password')";
+        $db->insert($sql);
+        echo "<script>
+        alert('Admin added successfully!');
+        window.location.href = 'index.php';
+        </script>";
+    }
 }
+
+    // $sql = "INSERT INTO tbl_users (username, email, password) VALUES ('$username', '$email', '$password')";
+    // $db->insert($sql);
+    // echo "<script>
+    // alert('$password');
+    // window.location.href = 'index.php';
+    // </script>";
+
 ?>
 
 <h2>Add Admin</h2>

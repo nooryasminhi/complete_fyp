@@ -6,7 +6,7 @@ $db = new Database();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM charities WHERE id = $id";
+    $sql = "SELECT * FROM charitymanage WHERE id = $id";
     $result = $db->select($sql);
     if ($result) {
         $charity = $result->fetch_assoc();
@@ -14,9 +14,9 @@ if (isset($_GET['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['updateCharity'])) {
-    $name = $_POST['name'];
+    $project = $_POST['project'];
     $description = $_POST['description'];
-    $sql = "UPDATE charities SET name='$project', description='$description' WHERE id=$id";
+    $sql = "UPDATE charitymanage SET project='$project', description='$description' WHERE id=$id";
     $db->update($sql);
     header("Location: manage_charities.php");
 }

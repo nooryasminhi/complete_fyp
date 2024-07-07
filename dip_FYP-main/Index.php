@@ -21,7 +21,7 @@
 
             
                                 </div>
-                                <img src="IMG/Charity.jpg" alt="" class="home__img">
+                                <img src="image/charity_picture.png" alt="" class="home__img">
                             </div>
                         </section>
                         
@@ -34,7 +34,7 @@
                                     <p class="about__description">Meet the Three Robin Hoods: Yasmin, Adam, and Afiqah. United by their passion for aiding those in need, they harness their individual talents to make a positive impact.</p>
                                     <a href="aboutUs.php" class="button">Explore history</a>
                                 </div>
-                                <img src="IMG/3_idiots.gif" alt="" class="about__img">
+                                <img src="image/spongebob.png" alt="" class="about__img">
                             </div>
                         </section>
             
@@ -106,7 +106,7 @@
                                 </div>
             
                                 <div class="contact__button">
-                                    <a href="contactUs.html" class="button">Contact us now</a>
+                                    <a href="contactUs.php" class="button">Contact us now</a>
                                 </div>
                             </div>
                         </section>

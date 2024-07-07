@@ -30,6 +30,7 @@
         </div>
 
         <button type="submit" class="button">Sign Up</button>
+        <a href="login.php">Login</a>
     </form>
 </div>
 
@@ -41,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
+
+    
 
     // Check if passwords match
     if ($password !== $confirm_password) {

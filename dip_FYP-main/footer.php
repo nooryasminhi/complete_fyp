@@ -24,13 +24,11 @@
                     <li><a href="services.php" class="footer__link">Projects</a></li>
                     <li><a href="services.php" class="footer__link">Ongoing Project</a></li>
                     <li><a href="services.php" class="footer__link">Charity cases</a></li>
-                    <li><a href="services.php" class="footer__link">Statistics</a></li>
                 </ul>
             </div>
             <div class="footer__content">
                 <h3 class="footer__title">Information</h3>
                 <ul>
-                    <li><a href="event.php" class="footer__link">Event</a></li>
                     <li><a href="contactUs.php" class="footer__link">Contact us</a></li>
                     <li><a href="privacyPolicy.php" class="footer__link">Privacy policy</a></li>
                     <li><a href="TermService.php" class="footer__link">Terms of services</a></li>

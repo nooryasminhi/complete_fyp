@@ -20,6 +20,9 @@ Session::init();
                     <a class="nav-link" href="manage_donations.php">Manage Donations</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="manage_messages.php">Manage Messages</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="add_admin.php">Add Admin</a>
                 </li>
                 <li class="nav-item">
