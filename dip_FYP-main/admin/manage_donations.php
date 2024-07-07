@@ -106,7 +106,15 @@ $result = $db->select($sql);
                         <td>{$row['project']}</td>
                         <td>";
                 if (!empty($row['payproof'])) {
-                    echo "<a href='{$row['payproof']}' target='_blank'>View Proof</a>";
+                    //seoerating the 2 parts so that i doesnt become admin/admin/uploads/'images'
+                 $path_parts = explode('/', $row['payproof']);
+                    // Check if the path has at least 2 parts
+                    if (count($path_parts) >= 2) {
+                        $newurl = $path_parts[count($path_parts) - 2] . '/' . $path_parts[count($path_parts) - 1];
+                        echo "<a href='$newurl' target='_blank'>View Proof</a>";
+                    } else {
+                        echo "Invalid path";
+                    }
                 } else {
                     echo "No Proof";
                 }
